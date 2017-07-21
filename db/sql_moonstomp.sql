@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS albums;
+DROP TABLE IF EXISTS artists;
+
+CREATE TABLE albums(
+id SERIAL4 PRIMARY KEY,
+artist VARCHAR(255),
+album_name VARCHAR(255),
+album_pic VARCHAR(255)
+);
+
+CREATE TABLE artists(
+id SERIAL4 PRIMARY KEY,
+artist_name VARCHAR(255)
+);
+
+
+
