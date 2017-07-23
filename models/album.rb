@@ -13,6 +13,7 @@ class Album
     @values = ['artist', 'album_name', 'genre', 'current_stock', 'ideal_stock']
   end 
 
+
   def save
     sql = "INSERT INTO albums (
     album_name, genre, current_stock, ideal_stock)

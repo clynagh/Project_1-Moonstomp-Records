@@ -9,10 +9,6 @@ class Artist
     @artist_name = params['artist_name']
   end 
 
-  def artist_name()
-    return @artist_name
-  end
-
   def save
     sql = "INSERT INTO artists (
       artist_name)
