@@ -2,6 +2,22 @@ require_relative('../models/artist.rb')
 require_relative('../models/album.rb')
 require('pry')
 
+@artist1 = Artist.new({
+  'artist_name' => 'Streetlight Manifesto'
+  })
+
+@artist2 = Artist.new({
+  'artist_name' => 'The Specials'
+  })
+
+@artist3 = Artist.new({
+  'artist_name' => 'Madness'
+  })
+
+@artist1.save
+@artist2.save
+@artist3.save
+
 @album1 = Album.new({
   'album_name' => 'Everything Goes Numb',
   'genre' => 'Ska',
@@ -27,21 +43,7 @@ require('pry')
 @album2.save
 @album3.save
 
-@artist1 = Artist.new({
-  'artist_name' => 'Streetlight Manifesto'
-  })
 
-@artist2 = Artist.new({
-  'artist_name' => 'The Specials'
-  })
-
-@artist3 = Artist.new({
-  'artist_name' => 'Madness'
-  })
-
-@artist1.save
-@artist2.save
-@artist3.save
 
 binding.pry
 nil

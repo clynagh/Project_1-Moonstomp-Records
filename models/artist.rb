@@ -10,7 +10,7 @@ class Artist
   end 
 
   def artist_name()
-    return "#{@artist_name}"
+    return @artist_name
   end
 
   def save
