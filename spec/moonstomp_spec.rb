@@ -10,7 +10,7 @@ class TestArtists < MiniTest::Test
       })
   end
 
-  def test_is_student
-    assert_equal(Student, @student1.class)
+  def test_artist
+    assert_equal(, @artist1.class)
   end
 end
