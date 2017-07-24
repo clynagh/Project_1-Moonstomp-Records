@@ -2,6 +2,8 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('./models/album')
 require_relative('./models/artist')
+require('pry-byebug')
+also_reload( './models/*.rb') if development?
 
 get '/moonstomp/artists' do
   @artist_name = Artist.all
@@ -24,6 +26,8 @@ get '/moonstomp/albums' do
 end
 
 get '/moonstomp/new-album' do
+  @artists = Artist.all
+# binding.pry
   @albums = Album.all
   erb(:create_album)
 end

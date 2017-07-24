@@ -2,7 +2,7 @@ require('pry')
 require_relative("../db/sql_runner.rb")
 
 class Artist
-  attr_reader :artist_name
+  attr_reader :artist_name, :id
 
   def initialize(params)
     @id = params['id'].to_i if params['id']

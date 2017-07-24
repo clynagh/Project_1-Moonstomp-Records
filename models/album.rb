@@ -2,7 +2,7 @@ require('pry')
 require_relative("../db/sql_runner.rb")
 
 class Album
-  attr_reader :album_name, :genre, :current_stock, :ideal_stock
+  attr_reader :album_name, :genre, :current_stock, :ideal_stock, :id
 
   def initialize(params)
     @id = params['id'].to_i if params['id']
