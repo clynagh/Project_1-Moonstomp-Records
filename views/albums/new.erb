@@ -1,0 +1,21 @@
+<form action="/albums" method="POST">
+  <label for="album_name">Album Name:</label><br>
+  <input type="text" name="album_name"><br>
+
+  <label for="genre">Genre:</label><br>
+  <input type="text" name="genre"><br>
+
+  <select name="artist_id" >
+      <option value="" disabled selected>please select an artist</option>
+      <% @artists.each do |artist| %>
+        <option value="<%= artist.id %>"><%= artist.artist_name %></option>
+      <% end %>
+    </select>
+
+
+   <input class="btn btn--action" type='submit' value="Submit">
+  </form>
+
+
+ 
+

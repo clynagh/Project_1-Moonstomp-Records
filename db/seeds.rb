@@ -22,21 +22,24 @@ require('pry')
   'album_name' => 'Everything Goes Numb',
   'genre' => 'Ska',
   'current_stock' => 2,
-  'ideal_stock' => 3
+  'ideal_stock' => 3,
+  'artist_id' => @artist1.id
   })
 
 @album2 = Album.new({
   'album_name' => 'In The Studio',
   'genre' => 'Ska',
   'current_stock' => 2,
-  'ideal_stock' => 3
+  'ideal_stock' => 3,
+  'artist_id' => @artist2.id
   })
 
 @album3 = Album.new({
   'album_name' => 'One Step Beyond',
   'genre' => 'Ska',
   'current_stock' => 2,
-  'ideal_stock' => 3
+  'ideal_stock' => 3,
+  'artist_id' => @artist3.id
   })
 
 @album1.save
