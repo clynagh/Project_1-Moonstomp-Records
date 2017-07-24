@@ -2,7 +2,8 @@
 
 <h1>New album</h1>
 
-<% @values.each do |artist| %>
-  <h4>Artist Names: <%= artist.artist_name %></h4>
+<% @albums.each do |album| %>
+  <h4>Album Name: <%= album.album_name %></h4>
+  <h4>Genre: <%= album.genre %></h4>
   <hr/>
 <% end %>

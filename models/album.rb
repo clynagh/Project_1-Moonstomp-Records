@@ -1,8 +1,8 @@
 require('pry')
-require_relative("../db/sql_runner")
+require_relative("../db/sql_runner.rb")
 
 class Album
-  attr_reader :artist, :album_name, :album_pic
+  attr_reader :album_name, :genre, :current_stock, :ideal_stock
 
   def initialize(params)
     @id = params['id'].to_i if params['id']
@@ -10,9 +10,7 @@ class Album
     @genre = params['genre']
     @current_stock = params['current_stock']
     @ideal_stock = params['ideal_stock']
-    @values = ['artist', 'album_name', 'genre', 'current_stock', 'ideal_stock']
   end 
-
 
   def save
     sql = "INSERT INTO albums (
@@ -32,13 +30,10 @@ class Album
 
   def self.all()
     sql = "SELECT * FROM albums"
-    albums = SqlRunner.run(sql)
+    values = []
+    albums = SqlRunner.run(sql, values)
     return albums.map{|album| Album.new(album)}
   end
 
-  def self.find(id)
-    sql = "SELECT * FROM albums WHERE id = #{id};"
-    return Album.new(SqlRunner.run(sql)[0])
-  end
   
 end
