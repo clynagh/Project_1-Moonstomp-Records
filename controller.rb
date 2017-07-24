@@ -23,12 +23,12 @@ get '/moonstomp/albums' do
   erb(:albums)
 end
 
-# get '/moonstomp/new-album' do
-#   @all_artists = Artist.all
-#   erb(:create_album)
-# end
+get '/moonstomp/new-album' do
+  @albums = Album.all
+  erb(:create_album)
+end
 
-# post '/hogwarts/new-artist' do 
-#   Artist.new(params).save
-#   redirect to '/moonstomp/artists'
-# end
+post '/moonstomp/new-album' do 
+  Album.new(params).save
+  redirect to '/moonstomp/albums'
+end
