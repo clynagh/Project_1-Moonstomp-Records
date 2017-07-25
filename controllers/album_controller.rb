@@ -26,7 +26,7 @@ end
 #SHOW
 get '/albums/:id' do
   @album = Album.find(params[:id])
-  erb(:show)
+  erb(:"albums/show")
 end
 
 #EDIT

@@ -27,9 +27,9 @@ class Artist
     return artists.map{|artist| Artist.new(artist)}
   end
 
-  def self.find(id)
+  def self.find()
     sql = "SELECT * FROM artists WHERE id = #{id};"
-    values = [id]
+    values = []
     return Artist.new(SqlRunner.run(sql, values)[0])
   end
 
