@@ -8,6 +8,7 @@ also_reload( '../models/*.rb') if development?
 
 get '/albums' do
   @albums = Album.all
+  @artists = Artist.all
   erb(:"albums/index")
 end
 
