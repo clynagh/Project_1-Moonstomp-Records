@@ -61,10 +61,9 @@ class Album
     album_name, genre, current_stock, ideal_stock, artist_id)
     =
     ($1, $2, $3, $4, $5)
-    RETURNING id"
+    WHERE id = #{@id};"
     values = [@album_name, @genre, @current_stock, @ideal_stock, @artist_id]
-    results = SqlRunner.run(sql, values)
-    @id = results.first()['id'].to_i
+    SqlRunner.run(sql, values)
   end
 
   def self.delete_all()

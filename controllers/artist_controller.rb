@@ -35,8 +35,9 @@ end
 
 #EDIT
 get '/artists/:id/edit' do
-  @artist = Artist.find(params[:id])
-  erb(:edit)
+  @artists = Artist.find(params[:id])
+  @albums = Album.all
+  erb(:"artists/edit")
 end
 
 # UPDATE

@@ -1,0 +1,17 @@
+<h1>Artist Update Page</h1>
+
+<form action="/artists/<%= @artists.id %>" method="POST">
+
+  <label for="artist_name">Artist Name:</label><br>
+    <input id="artist_name" type="text" name="artist_name" value="<%= @artists.artist_name %>"><br>
+
+
+  <label for="album_id">Album</label>
+    <select id="album_id" name="album_id">
+      <% @albums.each do |album| %>
+        <option value="<%= album.id %>"><%= album.album_name %></option>
+      <% end %>
+    </select>
+
+  <input type='submit' value="Update Records"/>
+</form>
