@@ -25,15 +25,15 @@ end
 
 #SHOW
 get '/albums/:id' do
-  @album = Album.find(params[:id])
-  @artist = Artist.find(params[:id])
+  @albums = Album.find(params[:id])
+  @artists = Artist.find(params[:id])
   erb(:"albums/show")
 end
 
 #EDIT
 get '/albums/:id/edit' do
   @album = Album.find(params[:id])
-  @albums = Album.all
+  @artists = Artist.all
   erb(:"albums/edit")
 end
 

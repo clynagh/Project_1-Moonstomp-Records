@@ -59,7 +59,7 @@ class Album
   def update()
     sql = "UPDATE albums SET (
     album_name, genre, current_stock, ideal_stock, artist_id)
-    VALUES
+    =
     ($1, $2, $3, $4, $5)
     RETURNING id"
     values = [@album_name, @genre, @current_stock, @ideal_stock, @artist_id]

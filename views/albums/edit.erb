@@ -1,16 +1,24 @@
 <h1>Update Page</h1>
 
 <form action="/albums/<%= @album.id %>" method="POST">
+
   <label for="album_name">Album Name:</label><br>
     <input id="album_name" type="text" name="album_name" value="<%= @album.album_name %>"><br>
 
   <label for="genre">Genre:</label><br>
     <input id="genre" type="text" name="genre" value="<%= @album.genre %>"><br>
 
-  <label for="current_stock">Album Name:</label><br>
+  <label for="artist_id">Artist</label>
+    <select id="artist_id" name="artist_id">
+      <% @artists.each do |artist| %>
+        <option value="<%= artist.id %>"><%= artist.artist_name %></option>
+      <% end %>
+    </select>
+
+  <label for="current_stock">Current Stock:</label><br>
     <input id="current_stock" type="text" name="current_stock" value="<%= @album.current_stock %>"><br>
 
-  <label for="ideal_stock">Album Name:</label><br>
+  <label for="ideal_stock">Ideal Stock:</label><br>
     <input id="ideal_stock" type="text" name="ideal_stock" value="<%= @album.ideal_stock %>"><br>
 
   <input type='submit' value="Update Records"/>
