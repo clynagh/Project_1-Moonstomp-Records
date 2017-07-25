@@ -19,3 +19,40 @@ post '/artists' do
   Artist.new(params).save
   redirect to '/artists'
 end
+
+#CREATE
+post '/artists' do 
+  Artist.new(params).save
+  redirect to '/artists/#{artist.id}'
+end
+
+#SHOW
+get '/artists/:id' do
+  @artist = Artist.find(params[:id])
+  erb(:show)
+end
+
+#EDIT
+get '/artists/:id/edit' do
+  @artist = Artist.find(params[:id])
+  erb(:edit)
+end
+
+# UPDATE
+post '/artists/:id' do
+  Artist.new(params).update
+  redirect to '/artists'
+end
+
+# #DESTROY
+post '/artists/:id/delete' do
+  artist = Artist.find( params[:id] )
+  artist.delete()
+  redirect to '/artists'
+end
+
+post '/artists/:id/delete' do
+  Artists.destroy(params[:id])
+  redirect to("/artists")
+end
+

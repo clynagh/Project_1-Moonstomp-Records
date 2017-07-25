@@ -17,7 +17,34 @@ get '/albums/new' do
   erb(:"albums/new")
 end
 
+#CREATE
 post '/albums' do 
   Album.new(params).save
+  redirect to '/albums/#{album.id}'
+end
+
+#SHOW
+get '/albums/:id' do
+  @album = Album.find(params[:id])
+  erb(:show)
+end
+
+#EDIT
+get '/albums/:id/edit' do
+  @album = Album.find(params[:id])
+  erb(:edit)
+end
+
+# UPDATE
+post '/albums/:id' do
+  Album.new(params).update
   redirect to '/albums'
 end
+
+# #DESTROY
+post '/albums/:id/delete' do
+  album = Album.find( params[:id] )
+  album.delete()
+  redirect to '/albums'
+end
+

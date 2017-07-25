@@ -52,6 +52,20 @@ class Album
        'ORDER MORE'
       end
   end
+
+  def self.delete_all()
+    sql = "DELETE FROM albums"
+    values = []
+    SqlRunner.run( sql, values )
+  end
+
+  def self.destroy(id)
+    sql = "DELETE FROM albums
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run( sql, values )
+  end
+  
 end
 
 
