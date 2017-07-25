@@ -1,0 +1,40 @@
+html {
+  font-family: 'Gruppo', cursive;
+}
+
+header {
+
+}
+
+body {
+  background-image: url('/record.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    border-bottom: 1px solid #474C55;
+    border-left: 1px solid #474C55;
+    display: inline;
+}
+
+
+a:link, a:visited {
+    color: #474C55;
+    padding: 14px 25px; 
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+
+

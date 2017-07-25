@@ -2,19 +2,36 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-  <title>Moonstomp Records</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+<link href="https://fonts.googleapis.com/css?family=Gruppo" rel="stylesheet">
+<link rel="icon" href="/icon.png" />
+  <title>Moonstomp_Records</title>
 </head>
 <body>
-<nav>
-<li>
-  <a href="/artists">Artists</a>
-</li>
-<li>
-  <a href="/albums">Albums</a>
-</li>
-</nav>
+
+<ul>
+  <li><a href="/artists">Artists</a></li>
+  <li><a href="/albums">Albums</a></li>
+  <li><a href="/artists/new">Add Artist</a></li>
+  <li><a href="/albums/new">Add Album</a></li>
+</ul>
+
 
 <%= yield %>
+
+<!-- <div class="grid" >
+    <div class="grid-row grid-row-sm">
+      <div class="cell"><a href="/artists">Artists</a></div>
+      <div class="cell"><a href="/albums">Albums</a></div>
+    </div>
+
+    <div class="grid-row grid-row-md">
+      <div class="cell"><a href="/artists/new">Add Artist</a></div>
+      <div class="cell"><a href="/albums/new">Add Album</a></div>
+    </div>
+  </div> -->
+
+
 
 
 
