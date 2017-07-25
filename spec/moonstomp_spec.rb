@@ -1,16 +1,17 @@
 require('minitest/autorun')
-require('pry')
-require_relative('../models/artists')
+require('pry-byebug')
+require_relative('../models/stock.rb')
 
-class TestArtists < MiniTest::Test
+class TestStock < MiniTest::Test
 
   def setup
-    @artist1 = Artist.new({
-      'artist_name' => "The Specials",
-      })
+    @stock = Stock.new("overstocked")
   end
 
-  def test_artist
-    assert_equal(, @artist1.class)
-  end
+   def test_percentage_of_stock()
+    # @stock.percentage_of_stock()
+    #  stock =  ((15 / 10).to_f * 100).round(2)
+    # binding.pry
+    # assert_equal("Overstocked", @stock.percentage_of_stock )
+   end
 end

@@ -13,7 +13,6 @@ end
 
 get '/albums/new' do
   @artists = Artist.all
-# binding.pry
   @albums = Album.all
   erb(:"albums/new")
 end

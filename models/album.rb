@@ -1,4 +1,4 @@
-require('pry')
+require('pry-byebug')
 require_relative("../db/sql_runner.rb")
 
 class Album
@@ -36,5 +36,25 @@ class Album
     return albums.map{|album| Album.new(album)}
   end
 
-  
+  def percentage()
+    result = (@current_stock.to_f/@ideal_stock.to_f) * 100
+    percentage = result.to_i
+      case 
+       when percentage > 100
+       'Overstocked'
+       when percentage > 60
+       'Stock levels HIGH'
+       when percentage > 40
+       'Stock levels MEDIUM'
+       when percentage < 40
+       'Stock levels LOW'
+       else        
+       'ORDER MORE'
+      end
+  end
 end
+
+
+
+
+   
