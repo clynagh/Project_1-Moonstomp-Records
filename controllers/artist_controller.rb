@@ -48,8 +48,9 @@ end
 
 # #DESTROY
 post '/artists/:id/delete' do
-  artist = Artist.find( params[:id] )
-  artist.delete()
+  @artist = Artist.find( params[:id] )
+  @artist.delete()
+  erb(:"artists/show")
   redirect to '/artists'
 end
 

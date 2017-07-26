@@ -1,29 +1,28 @@
 <h1><a href="/">Moonstomp_Records</a></h1>
 <br>
 <h2>Album Update Page</h2>
+<div class="edit-album">
+  <form action="/albums/<%= @album.id %>" method="POST">
 
-<form action="/albums/<%= @album.id %>" method="POST">
-
-  <label for="album_name">Album Name:</label><br>
+    <label for="album_name">Album Name:</label><br>
     <input id="album_name" type="text" name="album_name" value="<%= @album.album_name %>"><br>
 
-  <label for="genre">Genre:</label><br>
+    <label for="genre">Genre:</label><br>
     <input id="genre" type="text" name="genre" value="<%= @album.genre %>"><br>
 
-  <label for="artist_id">Artist</label>
+    <label for="artist_id">Artist</label><br>
     <select id="artist_id" name="artist_id">
       <% @artists.each do |artist| %>
-        <option value="<%= artist.id %>"><%= artist.artist_name %></option>
+      <option value="<%= artist.id %>"><%= artist.artist_name %></option>
       <% end %>
-    </select>
+      </select><br>
 
-  <label for="current_stock">Current Stock:</label><br>
+    <label for="current_stock">Current Stock:</label><br>
     <input id="current_stock" type="text" name="current_stock" value="<%= @album.current_stock %>"><br>
 
-  <label for="ideal_stock">Ideal Stock:</label><br>
+    <label for="ideal_stock">Ideal Stock:</label><br>
     <input id="ideal_stock" type="text" name="ideal_stock" value="<%= @album.ideal_stock %>"><br>
-
-  <input type='submit' value="Update Records"/>
-</form>
-
-  
+      <br>
+    <input type='submit' value="Update Records"/>
+  </form>
+</div>

@@ -1,14 +1,15 @@
 <h1><a href="/">Moonstomp_Records</a></h1>
 <br>
 <h2>Album Details</h2>
-
+<div class="album-show">
   <p>Album Name: <%= @album.album_name %></p>
   <p>Genre: <%= @album.genre %></p>
   <p>Stock Level: <%= @album.percentage %></p>
   <p>Artist Name: <%= @album.artist.artist_name %></p>
-
-<a href="/albums/<%= @album.id %>/edit">Edit</a><br>
+<a href="/albums/<%= @album.id %>/edit">Edit Album</a><br>
+<br>
 <form action="/albums/<%= @album.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+</div>
 
 
 
