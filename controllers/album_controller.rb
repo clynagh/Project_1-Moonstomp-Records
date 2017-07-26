@@ -21,7 +21,7 @@ end
 #CREATE
 post '/albums' do 
   Album.new(params).save
-  redirect to '/albums/#{album.id}'
+  redirect to '/albums'
 end
 
 #SHOW
@@ -46,8 +46,9 @@ end
 
 # #DESTROY
 post '/albums/:id/delete' do
-  album = Album.find( params[:id] )
-  album.delete()
+  @album = Album.find(params[:id] )
+  album.delete
+  erb(:"albums/show")
   redirect to '/albums'
 end
 

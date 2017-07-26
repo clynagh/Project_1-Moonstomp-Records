@@ -6,3 +6,13 @@
 <h2>Stock Level: <%= @albums.percentage %></h2>
 <h2>Artist Name: <%= @artists.artist_name%></h2>
 
+
+<a href="/albums/<%= @albums.id %>/edit">Edit</a>
+<form action="/albums/<%= @albums.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+
+
+
+
+
+
+
