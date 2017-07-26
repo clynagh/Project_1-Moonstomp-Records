@@ -6,7 +6,7 @@ require('pry-byebug')
 also_reload( '../models/*.rb') if development?
 
 get '/artists' do
-  @artist_name = Artist.all
+  @artists = Artist.all
   erb(:"artists/index")
 end
 
