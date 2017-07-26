@@ -53,8 +53,4 @@ post '/artists/:id/delete' do
   redirect to '/artists'
 end
 
-post '/artists/:id/delete' do
-  Artists.destroy(params[:id])
-  redirect to("/artists")
-end
 
