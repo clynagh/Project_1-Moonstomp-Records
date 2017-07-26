@@ -3,7 +3,7 @@ require_relative('../models/album.rb')
 require('pry')
 
 @artist1 = Artist.new({
-  'artist_name' => 'Streetlight Manifesto'
+  'artist_name' => 'Nirvana'
   })
 
 @artist2 = Artist.new({
@@ -11,7 +11,7 @@ require('pry')
   })
 
 @artist3 = Artist.new({
-  'artist_name' => 'Madness'
+  'artist_name' => 'Radiohead'
   })
 
 @artist1.save
@@ -19,8 +19,8 @@ require('pry')
 @artist3.save
 
 @album1 = Album.new({
-  'album_name' => 'Everything Goes Numb',
-  'genre' => 'Ska',
+  'album_name' => 'Nevermind',
+  'genre' => 'Grunge',
   'current_stock' => 2,
   'ideal_stock' => 3,
   'artist_id' => @artist1.id
@@ -35,8 +35,8 @@ require('pry')
   })
 
 @album3 = Album.new({
-  'album_name' => 'One Step Beyond',
-  'genre' => 'Ska',
+  'album_name' => 'Radiohead',
+  'genre' => 'Alternative',
   'current_stock' => 2,
   'ideal_stock' => 3,
   'artist_id' => @artist3.id
