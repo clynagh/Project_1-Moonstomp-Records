@@ -2,14 +2,12 @@ html {
   font-family: 'Gruppo', cursive;
 }
 
-header {
-
-}
 
 body {
   background-image: url('/record.jpg');
   background-repeat:no-repeat;
   background-size:cover;
+  text-align: left;
 }
 
 ul {
@@ -34,6 +32,36 @@ a:link, a:visited {
 
 a:hover, a:active {
     text-decoration: underline;
+}
+
+.artist-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1080px;
+}
+
+.artist-name {
+  flex: 1;
+  padding: 10px;
+  border: solid 1px #474C55;
+  margin: 10px;
+  display: inline-flex;
+}
+
+@media all and (min-width: 480px) {
+  .artist-na {
+    flex-direction: row;
+  }
+}
+@media all and (min-width: 720px) {
+  .grid-row-md {
+    flex-direction: row;
+  }
+}
+@media all and (min-width: 960px) {
+  .grid-row-lg {
+    flex-direction: row;
+  }
 }
 
 

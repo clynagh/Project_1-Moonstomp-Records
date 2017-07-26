@@ -1,10 +1,22 @@
 <h1><a href="/">Moonstomp_Records</a></h1>
+<br>
+<h1>Artist_Page</h1>
 
-<h1>Artist Page</h1>
+<div class="artist-grid">
 
 <% @artists.each do |artist| %>
-  <h4>Artist Name: <%= artist.artist_name %></h4>
-  <h4><a href="/artists/<%= artist.id %>">View Artist:</a></h4>
-  <hr/>
+
+  <figure class='artist-name'>
+
+    <h4>Artist Name: <%= artist.artist_name %></h4>
+    <h4><a href="/artists/<%= artist.id %>">Artist:</a></h4>
+
+  </figure>
+
+
+  
+  
   
 <% end %>
+
+</div>

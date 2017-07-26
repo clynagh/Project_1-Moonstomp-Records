@@ -54,11 +54,11 @@ class Album
        when percentage > 100
        'Overstocked'
        when percentage > 60
-       'Stock levels HIGH'
+       'HIGH'
        when percentage > 40
-       'Stock levels MEDIUM'
+       'MEDIUM'
        when percentage < 40
-       'Stock levels LOW'
+       'LOW'
        else        
        'ORDER MORE'
       end
