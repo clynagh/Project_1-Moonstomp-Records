@@ -37,32 +37,61 @@ a:hover, a:active {
 .artist-grid {
   display: flex;
   flex-wrap: wrap;
-  width: 1080px;
+  width: 80%;
 }
 
 .artist-name {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 2px solid #474C55;  
+}
+
+
+/*.artist-name {
   flex: 1;
   padding: 10px;
   border: solid 1px #474C55;
   margin: 10px;
   display: inline-flex;
+  align-items: center;
+  min-width: 120px;
+}*/
+
+
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
 }
 
+.album-name {
+    display: inline-block;
+    width: 175px;
+    height: 150px;
+    margin: 10px;
+    border: 2px solid #474C55;  
+}
+
+
 @media all and (min-width: 480px) {
-  .artist-na {
+  .album-name {
     flex-direction: row;
   }
 }
 @media all and (min-width: 720px) {
-  .grid-row-md {
+  .album-name {
     flex-direction: row;
   }
 }
 @media all and (min-width: 960px) {
-  .grid-row-lg {
+  .album-name {
     flex-direction: row;
   }
 }
+
+
 
 
 

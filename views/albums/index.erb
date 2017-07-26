@@ -1,17 +1,20 @@
 <h1><a href="/">Moonstomp_Records</a></h1>
+<br>
+<h2>Album_Page</h2>
 
-<h1>Albums Page</h1>
-
-<h1>New album</h1>
+<div class="album-grid">
 
   <% @albums.each do |album| %>
-    <h4>Album Name: <%= album.album_name %></h4>
-    <h4>Genre: <%= album.genre %></h4>
-    <h4>Current Stock: <%= album.current_stock %></h4>
-    <h4>Ideal Stock: <%= album.ideal_stock %></h4>
-    <h4>Stock Level: <%= album.percentage %></h4>
-    <h4><a href="/albums/<%= album.id %>">View Album:</a></h4>
-    <hr/>
+
+<figure class="album-name">
+
+    <p>Album Name: <%= album.album_name %></p>
+    <p>Genre: <%= album.genre %></p>
+    <p>Stock Level: <%= album.percentage %></p>
+    <p><a href="/albums/<%= album.id %>">View Album:</a></p>
+
+    </figure>
 
 <% end %>
 
+</div>
